@@ -6,13 +6,16 @@ T(n) = 2T(n/2) + θ(n) hence after solving the time complexity would be O(nlogn)
 #include<bits/stdc++.h>
 using namespace std;
 
+//This functions simultaneously sorts the array and combines them.
 void mergeArray(int arr[], int low, int mid, int high)
 {
     int n1=(mid-low+1),n2=(high-mid);
+    //This creation of temporary array at every step causes a linear space complexity. We can use delete[] to free the memory as a recusion call is over.
     int left[n1],right[n2];
     for(int i=0;i<n1;i++){left[i]=arr[low+i];}
     for(int j=0;j<n2;j++){right[j]=arr[mid+j+1];}
-    int i=0,j=0,k=low;
+    //k is low since value of low changes with the recusrsion call and we need to keep the array consistent. 
+    int i=0,j=0,k=low; 
     while(i<n1 && j<n2)
     {
         if(left[i]<=right[j])
