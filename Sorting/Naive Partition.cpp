@@ -1,6 +1,7 @@
 /* The pivot selection and soring the elements according to the pivot is very crucial for quicksort algorithm as it determines the time and space complexity
 of the algorithm. We can select pivot and partition around it in various ways. This is naive partition in quickSort which requires extra auxiliary space
-O(n) and time complexity is O(n). The advantages of this partitioning algorithm is that it is stable*/
+O(n) and time complexity is O(n). The advantages of this partitioning algorithm is that it is stable. The disadvantage of this algorithm is that it uses 
+extra space and requires three traversals which is not feasible*/
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -8,6 +9,7 @@ using namespace std;
 void naivePartitioning(int arr[], int low, int high, int pivot)
 {
     int temp[high-low+1],index=0;
+    //Copies all the elements less than pivot in the temporary array
     for(int i=low;i<=high;i++)
     {
         if(arr[i]<=arr[pivot])
@@ -16,6 +18,7 @@ void naivePartitioning(int arr[], int low, int high, int pivot)
              index++;
         }
     }
+    //Copies all the element greater than pivot in the temporary array.
     for(int i=low;i<=high;i++)
     {
         if(arr[i]>arr[pivot])
