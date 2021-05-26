@@ -1,5 +1,5 @@
 /*
-Inversion Count for an array indicates – how far (or close) the array is from being sorted. If the array is already sorted, then the inversion count is 0,
+Inversion Count for an array indicates â€“ how far (or close) the array is from being sorted. If the array is already sorted, then the inversion count is 0,
 but if the array is sorted in the reverse order, the inversion count is the maximum.Formally speaking, two elements a[i] and a[j] form an inversion
 if a[i] > a[j] and i < j Time Complexity: O(n log n), The algorithm used is divide and conquer, So in each level, one full array traversal is needed,
 and there are log n levels, so the time complexity is O(n log n).
@@ -23,6 +23,10 @@ int countAndMerge(int arr[], int low, int mid, int high)
         }
         else{
             arr[k++]=right[j++];
+	    /*This step makes the algorithm differ from the merge sort function here we count
+	      the number of elements greater than the current element in the right portion of the
+	      array. This code is effcient because logically every element to the right of a greater
+	      element would definetly be greater as the array is sorted.*/
             res=res+(n1-i);
         }
     }
