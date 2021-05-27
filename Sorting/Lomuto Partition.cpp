@@ -34,3 +34,4 @@ int main()
     printArray(arr,n);
     return 0;
 }
+/* Lomutos partition has the advantage that it fixes the pivot element whereas hoares partition causes the pivot element to be swapped during the operation*/
