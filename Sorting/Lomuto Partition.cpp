@@ -16,7 +16,7 @@ void lomutoPartition(int arr[], int low, int high, int pivot)
             swap(arr[i],arr[j]);
         }
     }
-    swap(arr[i+1],arr[pivot]);
+    swap(arr[i+1],arr[high]);
     //return (i+1);
 }
 void printArray(int arr[], int n)
