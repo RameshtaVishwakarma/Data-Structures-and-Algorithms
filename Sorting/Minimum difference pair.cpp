@@ -4,7 +4,7 @@ Input: nums = [2, 4, 5, 9, 7]
 Output: 1
 Explanation: Difference between 5 and 4 is 1.
 Approach 1: Use two for loops and keep a track of minimum difference. Time complexity:Polynomial
-Approach 2: sort the array and traverse to find the difference. Time complexity:Linear*/
+Approach 2: sort the array and traverse to find the difference.*/
 
 #include<bits/stdc++.h>
 using namespace std;
