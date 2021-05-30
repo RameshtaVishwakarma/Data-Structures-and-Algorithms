@@ -10,6 +10,7 @@ Consider the situation where the input sequence is between range 1 to 10K and th
 #include <bits/stdc++.h>
 using namespace std;
 
+//Counting Sort for Positive integers.
 void countSort(int arr[], int n, int k)
 {
     int count[k]={0};
