@@ -1,0 +1,6 @@
+Approach: The approach to solving the problem is to divide the problems into sub-problem
+-Divide into smaller Problem
+-Find Pattern
+-Find the base case
+-Have a Leap of faith in recursion
+-Solve for bigger problem.
