@@ -1,3 +1,5 @@
+//Difficulty Level : EASY
+
 #include<bits/stdc++.h>
 using namespace std;
 
