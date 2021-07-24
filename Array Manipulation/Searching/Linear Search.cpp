@@ -20,6 +20,7 @@ int main()
     int arr[] = {5,3,9,7,1,8,6};
     int n = sizeof(arr)/sizeof(arr[0]);
     if(linearSearch(arr,n,7)){cout<<"Element Found"<<endl;}else{cout<<"Element not Found"<<endl;}
+    return 0;
 }
 
 //Stupid code.
