@@ -20,7 +20,7 @@ using namespace std;
 //Approach : We can use linear search but there is no point in solving this problem then. The optimized way is to use binary search. The problem is self
 //explanatory
 
-int firstIndex(int arr[], int n, int x)
+int lastIndex(int arr[], int n, int x)
 {
     int low = 0, high = n-1;
     while(high >= low)
@@ -51,6 +51,6 @@ int main()
 {
     int arr[] = {5, 10, 10, 10, 20};
     int n = sizeof(arr)/sizeof(arr[0]);
-    cout<<firstIndex(arr,n,10)<<endl;
+    cout<<lastIndex(arr,n,10)<<endl;
     return 0;
 }
