@@ -19,10 +19,7 @@ void reverse(int arr[], int low, int high)
 {
 	while(low < high)
 	{
-		swap(arr[high], arr[low]);
-
-		low++;
-		high--;
+		swap(arr[high--], arr[low++]);
 	}
 }
 
