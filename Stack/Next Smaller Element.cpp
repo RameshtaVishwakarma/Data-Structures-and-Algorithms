@@ -1,5 +1,6 @@
 /*Difficulty Level : Medium
-Given an array, print the Next Smaller Element (NSE) for every element. The Smaller smaller Element for an element x is the first smaller element on the right side of x in array. Elements for which no smaller element exist (on right side), consider next smaller element as -1.
+Given an array, print the Next Smaller Element (NSE) for every element. The Smaller smaller Element for an element x is the first smaller element on the right side of x in array.
+Elements for which no smaller element exist (on right side), consider next smaller element as -1.
 Examples:
 a) For any array, rightmost element always has next smaller element as -1.
 b) For an array which is sorted in increasing order, all elements have next smaller element as -1.
