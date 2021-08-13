@@ -39,7 +39,9 @@ int countNonRepeated(int arr[], int n)
     }
     return count;
 }
+//Time Complexity : O(n) Space Complexity : O(1)
 
+//Driver Code
 int main()
 {
     int arr[]={1, 1, 2, 2, 3, 3, 4, 5, 6, 7};
