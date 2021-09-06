@@ -1,3 +1,4 @@
+/* Hard Problem */
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -60,8 +61,7 @@ vector<vector<string>> nqueen(int n)
     solve(0,board,result);
     return result;
 }
-
-
+//Driver Code:
 int main()
 {
     int n = 4;
