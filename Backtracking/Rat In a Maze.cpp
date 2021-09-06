@@ -1,3 +1,4 @@
+/* Hard Problem */
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -6,12 +7,12 @@ class solution
 public:
 void solve(vector<vector<int>> &m, vector<string> &result, int n, int i, int j, string res)
 {
-    //Base Case going beyond the matrix wallss:
+    //Base Case: Ihat is going beyond the matrix walls.
     if(i<0 || j<0 || i==n || j==n)
     {
         return;
     }
-    //If the cell is block, then return
+    //If the cell is blocked, then return.
     if(m[i][j] == 0)
     {
         return;
@@ -40,6 +41,8 @@ vector<string> findPath(vector<vector<int>> &m, int n) {
 }
 };
 //Time complexity : O((N^2)^4) Space Complexity : Number of recursive calls
+
+//Driver Code:
 int main()
 {
     int t;
