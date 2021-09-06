@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//Function to check whether it is safe to place queen at the selected location or not.
 bool issafe(int row, int col, vector<string> &board)
 {
     //checking whether the left row is safe or not
@@ -9,7 +10,6 @@ bool issafe(int row, int col, vector<string> &board)
         if(board[row][i] == 'Q')
             return false;
     }
-
     //checking upper diagonal
     for(int i=row,j=col;i>=0 && j>=0;i--,j--)
     {
@@ -25,7 +25,7 @@ bool issafe(int row, int col, vector<string> &board)
 
     return true;
 }
-
+//Recursive Function to place the queens in correct position.
 void solve(int col,vector<string> &board,vector<vector<string>> &result)
 {
     //Base case:
@@ -34,17 +34,20 @@ void solve(int col,vector<string> &board,vector<vector<string>> &result)
         result.push_back(board);
         return;
     }
+    //For every column check for each row.
     for(int row=0;row<board.size();row++)
     {
         if(issafe(row,col,board))
         {
+            //Place the queen at this position.
             board[row][col] = 'Q';
             solve(col+1,board,result);
+            //Backtrack by removing the queen from occupied position.
             board[row][col] ='.';
         }
     }
 }
-
+//Time Complexity : O(n!) Space Comlexity : O(n^2)
 vector<vector<string>> nqueen(int n)
 {
     vector<vector<string>> result;
